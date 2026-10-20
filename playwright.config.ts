@@ -32,26 +32,33 @@ export default defineConfig({
     headless: true,
     trace: 'on-first-retry',
     
+    
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-      
+      use: {
+        ...devices['Desktop Chrome'],
+        headless: true,
+      },
     },
-
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      use: {
+        ...devices['Desktop Firefox'],
+        headless: true,
+      },
     },
-
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      use: {
+        ...devices['Desktop Safari'],
+        headless: true,
+      },
     },
-
+  
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
@@ -71,6 +78,7 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
+  
   ],
 
   /* Run your local dev server before starting the tests */
