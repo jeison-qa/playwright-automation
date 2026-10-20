@@ -33,7 +33,7 @@ export default defineConfig({
 
     launchOptions: {
       slowMo: 1000,
-      headless: false,
+      headless: true,
     },
   },
 
